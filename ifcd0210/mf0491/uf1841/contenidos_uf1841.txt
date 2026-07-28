@@ -1,0 +1,72 @@
+1. Diseño web
+
+Planificación, diseño e implementación de páginas y sitios web.
+
+    - Navegabilidad.
+    - Interactividad.
+    - Usabilidad.
+    - Arquitectura y distribución de la información presentada.
+    - Integración de recursos: imágenes, audio, video, ...
+
+Lenguajes:
+    - HTML.
+    - CSS.
+    
+    1.1. Principios de diseño Web.
+    
+1.1.1. Diseño orientado al usuario.
+1.1.2. Diseño orientado a objetivos.
+1.1.3. Diseño orientado a la implementación.
+1.2. El proceso de diseño web.
+1.2.1. Estructura de un sitio web y navegabilidad.
+1.2.2. Estructura y composición de páginas.
+1.2.3. Compatibilidad con navegadores.
+1.2.4. Diferencias entre diseño orientado a presentación e impresión.
+
+2. Lenguaje de Marcado Generales
+
+2.1. Origen de los lenguajes de marcado generales: SGML y XML.
+    - GML y SGML. Historia.
+    - Historia de: HTML, XML y XHTML.
+    - Conceptos básicos de XML.
+2.2. Características generales de los lenguajes de marcado.
+    - Combinan la información contenida en un documento con marcas o indicaciones relacionadas con su estructura o la forma de representarlo.
+    - El propio lenguaje de marcas es el que especifica loo tipos de etiquetas que se pueden emplear, en qué lugares pueden colocarse y el significado que tiene cada una de ellas.
+    - La presencia de de etiquetas intercaladas e un documento escrito con lenguaje de marcas refleja inequívocamente su estructura y jerarquía.
+    - Los programas que interpretan los documentos escritos con lenguajes de marca no suelen mostrar al usuario las etiquetas propiamente dichas, ya que este suele estar interesado en visualizar unicamente el propio contenido del documento.
+    - Etiquetas, elementos y atributos.
+2.3. Estructura general de un documento con lenguaje de marcado.
+    - Metadatos e intrucciones de proceso.
+    - Codificación de caracteres. Caracteres especiales (escape).
+    - Etiquetas o marcas.
+    - Elementos.
+    - Atributos.
+    - Comentarios.
+2.3.1. Metadatos e instrucciones de proceso.
+2.3.2. Codificación de caracteres. Caracteres especiales (escape).
+    - UTF-8.
+    - Caracteres especiales o de escape.
+2.3.3. Etiquetas o marcas.
+2.3.4. Elementos.
+2.3.5. Atributos.
+2.3.6. Comentarios.
+2.4. Documentos válidos y bien formados.
+
+3. Lenguajes de marcado para presentación de paginas web.
+3.1. Historia de HTML y XHTML. Diferencias entre versiones.
+3.2. Estructura de un documento.
+3.2.1. Versiones.
+3.2.2. Elementos de cabecera.
+3.2.3. Elementos del cuerpo del documento.
+3.3. Color.
+3.3.1. Codificación de colores.
+3.3.2. Colores tipo.
+3.3.3. Colores seguros.
+3.4. Texto.
+3.4.1. Encabezados. Jerarquía y estructura del contenido de un documento.
+3.4.2. Párrafos.
+3.4.3. Alineación, espaciado y sangrado de texto.
+3.4.4. Características de letra: tipos, tamaños y colores.
+3.4.5. Separadores de texto.
+3.4.5. Etiquetas específicas parael marcado de texto. Estilos lógicos.
+
