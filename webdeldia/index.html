@@ -1,1 +1,282 @@
-web del dia
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Lenguajes de Marcado Generales</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text: #334155;
+            --border: #cbd5e1;
+            --highlight: #eff6ff;
+            --note: #fff7ed;
+        }
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family:'Segoe UI', Arial, sans-serif;
+            background:var(--bg);
+            color:var(--text);
+            line-height:1.7;
+        }
+
+        main{
+            max-width:1200px;
+            margin:auto;
+            padding:40px 20px;
+        }
+
+        header{
+            margin-bottom:40px;
+            text-align:center;
+        }
+
+        h1{
+            color:var(--secondary);
+            font-size:2.5rem;
+            margin-bottom:10px;
+        }
+
+        h2{
+            color:var(--primary);
+            margin:40px 0 15px;
+            padding-bottom:8px;
+            border-bottom:2px solid var(--border);
+        }
+
+        h3{
+            color:#0f172a;
+            margin:30px 0 15px;
+        }
+
+        p{
+            margin:10px 0;
+        }
+
+        article{
+            background:var(--card);
+            padding:25px;
+            border-radius:12px;
+            box-shadow:0 2px 8px rgba(0,0,0,.08);
+            margin-bottom:25px;
+            transition:.3s;
+        }
+
+        article:hover{
+            transform:translateY(-2px);
+        }
+
+        ul{
+            margin:15px 0 15px 25px;
+        }
+
+        li{
+            margin-bottom:8px;
+        }
+
+        aside{
+            background:var(--highlight);
+            border-left:5px solid var(--primary);
+            padding:15px;
+            margin:20px 0;
+            border-radius:8px;
+        }
+
+        .note{
+            background:var(--note);
+            border-left:5px solid #f97316;
+        }
+
+        footer{
+            margin-top:40px;
+            text-align:center;
+            color:#64748b;
+        }
+
+        @media (max-width:768px){
+            h1{
+                font-size:2rem;
+            }
+
+            main{
+                padding:20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<main>
+
+<header>
+    <h1>2. Lenguajes de Marcado Generales</h1>
+    <p>Introducción a los lenguajes de marcado, su evolución histórica y los elementos que permiten estructurar y representar información digital.</p>
+</header>
+
+<section>
+
+    <h2>2.1. Origen de los lenguajes de marcado generales: SGML y XML</h2>
+
+    <article>
+
+        <p>Los lenguajes de marcado surgieron para facilitar la estructuración de documentos de manera independiente de su presentación visual. Su objetivo principal es describir el contenido y la organización de la información mediante etiquetas.</p>
+
+        <ul>
+            <li>GML y SGML. Historia.</li>
+            <li>Historia de: HTML, XML y XHTML.</li>
+            <li>Conceptos básicos de XML.</li>
+        </ul>
+
+        <p>GML (Generalized Markup Language) fue desarrollado por IBM y sirvió como base para SGML (Standard Generalized Markup Language), un estándar internacional utilizado para definir otros lenguajes de marcado.</p>
+
+        <p>A partir de SGML nacieron tecnologías muy importantes como HTML, orientado a la publicación web, y XML, diseñado para el intercambio estructurado de datos. XHTML intentó combinar las ventajas de HTML con la rigurosidad sintáctica de XML.</p>
+
+        <aside>
+            <strong>Concepto clave:</strong> XML no define etiquetas preestablecidas, sino que permite crear vocabularios adaptados a las necesidades de cada aplicación.
+        </aside>
+
+    </article>
+
+    <h2>2.2. Características generales de los lenguajes de marcado</h2>
+
+    <article>
+
+        <p>Los lenguajes de marcado permiten representar información de forma estructurada mediante etiquetas que describen la función y organización de cada elemento dentro del documento.</p>
+
+        <ul>
+            <li>Combinan la información contenida en un documento con marcas o indicaciones relacionadas con su estructura o la forma de representarlo.</li>
+            <li>El propio lenguaje de marcas es el que especifica los tipos de etiquetas que se pueden emplear, en qué lugares pueden colocarse y el significado que tiene cada una de ellas.</li>
+            <li>La presencia de etiquetas intercaladas en un documento escrito con lenguaje de marcas refleja inequívocamente su estructura y jerarquía.</li>
+            <li>Los programas que interpretan los documentos escritos con lenguajes de marcas no suelen mostrar al usuario las etiquetas propiamente dichas, ya que este suele estar interesado en visualizar únicamente el contenido del documento.</li>
+            <li>Etiquetas, elementos y atributos.</li>
+        </ul>
+
+        <p>Gracias a esta estructura, los documentos pueden intercambiarse entre sistemas diferentes manteniendo tanto el contenido como su organización lógica.</p>
+
+        <aside class="note">
+            <strong>Importante:</strong> En los lenguajes de marcado se distingue claramente entre contenido, estructura y presentación.
+        </aside>
+
+    </article>
+
+    <h2>2.3. Estructura general de un documento con lenguaje de marcado</h2>
+
+    <article>
+
+        <p>Todo documento basado en un lenguaje de marcado está compuesto por diferentes elementos que permiten describir tanto la información como su organización interna.</p>
+
+        <ul>
+            <li>Metadatos e instrucciones de proceso.</li>
+            <li>Codificación de caracteres. Caracteres especiales (escape).</li>
+            <li>Etiquetas o marcas.</li>
+            <li>Elementos.</li>
+            <li>Atributos.</li>
+            <li>Comentarios.</li>
+        </ul>
+
+        <p>La correcta utilización de estos componentes garantiza la interoperabilidad y el procesamiento adecuado de los documentos por parte de distintas aplicaciones.</p>
+
+    </article>
+
+    <h3>2.3.1. Metadatos e instrucciones de proceso</h3>
+
+    <article>
+
+        <p>Los metadatos proporcionan información adicional sobre el documento, como su codificación, autoría o versión. Las instrucciones de proceso indican a determinadas aplicaciones cómo deben interpretar ciertos datos.</p>
+
+        <p>Estos elementos no forman parte del contenido visible, pero resultan fundamentales para el correcto tratamiento del documento.</p>
+
+    </article>
+
+    <h3>2.3.2. Codificación de caracteres. Caracteres especiales (escape)</h3>
+
+    <article>
+
+        <ul>
+            <li>UTF-8.</li>
+            <li>Caracteres especiales o de escape.</li>
+        </ul>
+
+        <p>La codificación determina cómo se representan internamente los caracteres. UTF-8 es actualmente la codificación más utilizada debido a su compatibilidad con prácticamente todos los idiomas.</p>
+
+        <p>Los caracteres especiales deben representarse mediante secuencias de escape cuando podrían confundirse con las propias etiquetas del lenguaje.</p>
+
+        <aside>
+            <strong>Ejemplo:</strong> el carácter "&lt;" suele representarse como <code>&amp;lt;</code> para evitar errores de interpretación.
+        </aside>
+
+    </article>
+
+    <h3>2.3.3. Etiquetas o marcas</h3>
+
+    <article>
+
+        <p>Las etiquetas son las marcas utilizadas para delimitar y describir elementos dentro de un documento. Habitualmente aparecen en pares de apertura y cierre.</p>
+
+        <p>Su función principal es indicar la estructura lógica de la información.</p>
+
+    </article>
+
+    <h3>2.3.4. Elementos</h3>
+
+    <article>
+
+        <p>Un elemento está formado por una etiqueta de apertura, su contenido y una etiqueta de cierre, aunque algunos lenguajes admiten elementos vacíos.</p>
+
+        <p>Los elementos constituyen las unidades básicas de organización de un documento marcado.</p>
+
+    </article>
+
+    <h3>2.3.5. Atributos</h3>
+
+    <article>
+
+        <p>Los atributos aportan información adicional a las etiquetas y permiten definir características específicas de los elementos.</p>
+
+        <p>Normalmente se expresan mediante parejas nombre-valor dentro de la etiqueta de apertura.</p>
+
+    </article>
+
+    <h3>2.3.6. Comentarios</h3>
+
+    <article>
+
+        <p>Los comentarios permiten incluir anotaciones dirigidas a los desarrolladores o mantenedores del documento sin que estas formen parte del contenido procesado o mostrado al usuario.</p>
+
+        <p>Son especialmente útiles para documentar estructuras complejas o dejar indicaciones de mantenimiento.</p>
+
+    </article>
+
+    <h2>2.4. Documentos válidos y bien formados</h2>
+
+    <article>
+
+        <p>Un documento bien formado cumple todas las reglas sintácticas del lenguaje utilizado, como el correcto anidamiento y cierre de etiquetas.</p>
+
+        <p>Un documento válido, además de estar bien formado, cumple las restricciones definidas por un esquema, DTD u otro mecanismo de validación.</p>
+
+        <aside class="note">
+            <strong>Recordatorio:</strong> todo documento válido debe ser necesariamente bien formado, aunque un documento bien formado no tiene por qué ser válido.
+        </aside>
+
+    </article>
+
+</section>
+
+<footer>
+    <p>Contenido formativo sobre Lenguajes de Marcado Generales.</p>
+</footer>
+
+</main>
+
+</body>
+</html>
