@@ -1,1 +1,184 @@
-web del dia
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2. Lenguaje de Marcado Generales</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #2563eb;
+            --accent: #eff6ff;
+            --text: #1f2937;
+            --border: #dbeafe;
+            --background: #f8fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            line-height: 1.7;
+            background-color: var(--background);
+            color: var(--text);
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--secondary);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            color: var(--secondary);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-left: 0.75rem;
+            border-left: 5px solid var(--secondary);
+        }
+
+        h3 {
+            color: #374151;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        ul {
+            margin-left: 2rem;
+            margin-top: 0.75rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        article {
+            background-color: var(--accent);
+            padding: 1rem 1.25rem;
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            margin-top: 0.75rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .container {
+                padding: 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>2. Lenguaje de Marcado Generales</h1>
+        </header>
+
+        <section>
+            <h2>2.1. Origen de los lenguajes de marcado generales: SGML y XML.</h2>
+            <article>
+                <ul>
+                    <li>GML y SGML. Historia.</li>
+                    <li>Historia de: HTML, XML y XHTML.</li>
+                    <li>Conceptos básicos de XML.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>2.2. Características generales de los lenguajes de marcado.</h2>
+            <article>
+                <ul>
+                    <li>Combinan la información contenida en un documento con marcas o indicaciones relacionadas con su estructura o la forma de representarlo.</li>
+                    <li>El propio lenguaje de marcas es el que especifica loo tipos de etiquetas que se pueden emplear, en qué lugares pueden colocarse y el significado que tiene cada una de ellas.</li>
+                    <li>La presencia de de etiquetas intercaladas e un documento escrito con lenguaje de marcas refleja inequívocamente su estructura y jerarquía.</li>
+                    <li>Los programas que interpretan los documentos escritos con lenguajes de marca no suelen mostrar al usuario las etiquetas propiamente dichas, ya que este suele estar interesado en visualizar unicamente el propio contenido del documento.</li>
+                    <li>Etiquetas, elementos y atributos.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>2.3. Estructura general de un documento con lenguaje de marcado.</h2>
+            <article>
+                <ul>
+                    <li>Metadatos e intrucciones de proceso.</li>
+                    <li>Codificación de caracteres. Caracteres especiales (escape).</li>
+                    <li>Etiquetas o marcas.</li>
+                    <li>Elementos.</li>
+                    <li>Atributos.</li>
+                    <li>Comentarios.</li>
+                </ul>
+            </article>
+
+            <h3>2.3.1. Metadatos e instrucciones de proceso.</h3>
+
+            <h3>2.3.2. Codificación de caracteres. Caracteres especiales (escape).</h3>
+            <article>
+                <ul>
+                    <li>UTF-8.</li>
+                    <li>Caracteres especiales o de escape.</li>
+                </ul>
+            </article>
+
+            <h3>2.3.3. Etiquetas o marcas.</h3>
+
+            <h3>2.3.4. Elementos.</h3>
+
+            <h3>2.3.5. Atributos.</h3>
+
+            <h3>2.3.6. Comentarios.</h3>
+        </section>
+
+        <section>
+            <h2>2.4. Documentos válidos y bien formados.</h2>
+        </section>
+
+        <footer>
+            <p>Temario generado automáticamente a partir del contenido proporcionado.</p>
+        </footer>
+    </main>
+</body>
+</html>
