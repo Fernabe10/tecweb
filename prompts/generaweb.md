@@ -15,10 +15,31 @@ Analiza la jerarquía del contenido y conviértela automáticamente a una estruc
 - Los subapartados anidados (ej.: `2.3.1.`, `2.3.2.`, etc.) deben transformarse en `<h3>`.
 - Si existieran niveles adicionales, utilizar `<h4>`, `<h5>` y `<h6>` según corresponda.
 
+### Desarrollo del contenido
+
+- Conserva todos los puntos proporcionados en el temario.
+- Amplía cada apartado de forma breve y coherente mediante explicaciones de 1 a 3 párrafos.
+- Complementa los conceptos cuando sea necesario para mejorar la comprensión del tema.
+- Añade ejemplos sencillos cuando aporten valor didáctico.
+- Mantén un tono académico, claro y orientado al aprendizaje.
+- No introduzcas contenidos que no estén relacionados directamente con el apartado tratado.
+- La ampliación debe ser moderada: el objetivo es enriquecer el contenido, no transformar el temario en un manual exhaustivo.
+
+### Elementos didácticos
+
+Cuando resulte apropiado:
+
+- Añade cuadros de información destacada.
+- Incluye notas importantes o recordatorios.
+- Añade ejemplos prácticos breves.
+- Resalta definiciones relevantes.
+- Utiliza bloques visuales para advertencias, recomendaciones o conceptos clave.
+
 ### Listas
 
 - Los elementos precedidos por `-` deben convertirse en listas no ordenadas (`<ul><li>`).
 - Mantén correctamente la jerarquía de las listas cuando existan subniveles.
+- Después de cada lista puedes añadir una breve explicación contextual si mejora la comprensión.
 
 ### Formato HTML
 
@@ -52,6 +73,9 @@ Incluye CSS embebido dentro de `<style>` con las siguientes características:
 - Diferenciación visual clara entre niveles de encabezados.
 - Listas correctamente sangradas.
 - Diseño responsive.
+- Tarjetas visuales para ejemplos y notas.
+- Efectos hover suaves.
+- Aspecto similar al de una plataforma de formación online.
 
 ### Semántica
 
@@ -62,19 +86,11 @@ Utiliza etiquetas semánticas cuando sea apropiado:
 - `<article>`
 - `<header>`
 - `<nav>` (si procede)
+- `<aside>` para notas y contenidos destacados.
 - `<footer>` (si procede)
 
 ### Requisitos adicionales
 
-- No inventes contenido.
-- Conserva exactamente todos los textos proporcionados.
-- Corrige únicamente errores de presentación derivados de la conversión.
-- Escapa correctamente caracteres especiales de HTML.
-- Devuelve únicamente el código HTML completo.
-- No añadas explicaciones fuera del código.
-
----
-
-## Contenido a convertir
-
-[Pega aquí el contenido del temario]
+- No elimines ningún contenido proporcionado.
+- Conserva la jerarquía original del temario.
+- Corrige erratas evidentes de ortografía o formato
