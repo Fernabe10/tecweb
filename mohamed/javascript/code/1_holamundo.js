@@ -1,3 +1,3 @@
 document.write("hola mundo")
 
-<a href="./index.html">Volver a la página principal</a>
+document.write('<br><br><a href="../index.html">Volver a la página principal</a>');
