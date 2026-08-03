@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cuestionario sobre Formularios HTML</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+}
+
+.contenedor{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    text-align:center;
+    color:#2c3e50;
+}
+
+.pregunta{
+    margin-bottom:25px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    background:#fafafa;
+}
+
+button{
+    background:#3498db;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+.correcta{
+    color:green;
+    font-weight:bold;
+}
+
+.incorrecta{
+    color:red;
+    font-weight:bold;
+}
+
+.resultado{
+    margin-top:10px;
+    padding:10px;
+    border-left:4px solid #3498db;
+    background:#eef7ff;
+}
+
+#puntuacion{
+    margin-top:20px;
+    padding:15px;
+    font-size:20px;
+    background:#e8f6e8;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+code{
+    background:#eee;
+    padding:2px 5px;
+    border-radius:3px;
+}
+
+@media(max-width:768px){
+    body{
+        padding:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contenedor">
+
+<h1>Cuestionario sobre Formularios HTML</h1>
+
+<form id="quiz"></form>
+
+<button type="button" onclick="corregir()">Corregir examen</button>
+
+<div id="puntuacion"></div>
+
+</div>
+
+<script>
+
+const preguntas = [
+
+{
+pregunta:"1. ¿Qué etiqueta define un formulario HTML?",
+opciones:["&lt;form&gt;","&lt;input&gt;","&lt;fieldset&gt;"],
+correcta:0,
+explicacion:"La etiqueta <form> es el contenedor principal de todos los controles del formulario."
+},
+
+{
+pregunta:"2. ¿Qué atributo indica dónde se enviarán los datos?",
+opciones:["target","action","href"],
+correcta:1,
+explicacion:"El atributo action especifica la página o archivo que recibirá los datos."
+},
+
+{
+pregunta:"3. ¿Qué atributo indica cómo se envían los datos?",
+opciones:["method","name","id"],
+correcta:0,
+explicacion:"El atributo method define el método de envío, normalmente GET o POST."
+},
+
+{
+pregunta:"4. ¿Qué etiqueta se utiliza para crear un campo de texto?",
+opciones:[
+"&lt;input type='text'&gt;",
+"&lt;text&gt;",
+"&lt;textarea type='text'&gt;"
+],
+correcta:0,
+explicacion:"El tipo text del elemento <input> permite introducir texto en una sola línea."
+},
+
+{
+pregunta:"5. ¿Qué tipo de input oculta los caracteres escritos?",
+opciones:["hidden","password","email"],
+correcta:1,
+explicacion:"El tipo password muestra puntos o asteriscos en lugar de los caracteres escritos."
+},
+
+{
+pregunta:"6. ¿Qué tipo de input sirve para introducir un correo electrónico?",
+opciones:["mail","email","correo"],
+correcta:1,
+explicacion:"El tipo email permite validar el formato de un correo electrónico."
+},
+
+{
+pregunta:"7. ¿Qué control permite seleccionar una única opción?",
+opciones:["checkbox","radio","select multiple"],
+correcta:1,
+explicacion:"Los botones radio permiten seleccionar una sola opción de un grupo."
+},
+
+{
+pregunta:"8. ¿Qué control permite seleccionar varias opciones?",
+opciones:["checkbox","radio","submit"],
+correcta:0,
+explicacion:"Las casillas checkbox permiten seleccionar varias respuestas."
+},
+
+{
+pregunta:"9. ¿Qué etiqueta crea una lista desplegable?",
+opciones:["&lt;option&gt;","&lt;list&gt;","&lt;select&gt;"],
+correcta:2,
+explicacion:"La etiqueta <select> crea una lista desplegable."
+},
+
+{
+pregunta:"10. ¿Qué etiqueta define cada elemento de una lista desplegable?",
+opciones:["&lt;item&gt;","&lt;option&gt;","&lt;choice&gt;"],
+correcta:1,
+explicacion:"Cada opción de una lista desplegable se define mediante la etiqueta <option>."
+},
+
+{
+pregunta:"11. ¿Qué etiqueta permite escribir varias líneas de texto?",
+opciones:["&lt;multiline&gt;","&lt;textarea&gt;","&lt;text&gt;"],
+correcta:1,
+explicacion:"La etiqueta <textarea> permite introducir textos largos."
+},
+
+{
+pregunta:"12. ¿Qué tipo de botón envía el formulario?",
+opciones:["submit","send","action"],
+correcta:0,
+explicacion:"El botón submit envía los datos introducidos por el usuario."
+},
+
+{
+pregunta:"13. ¿Qué tipo de botón borra los datos del formulario?",
+opciones:["delete","clear","reset"],
+correcta:2,
+explicacion:"El botón reset restablece los valores iniciales del formulario."
+},
+
+{
+pregunta:"14. ¿Qué etiqueta relaciona un texto descriptivo con un campo?",
+opciones:["&lt;caption&gt;","&lt;label&gt;","&lt;description&gt;"],
+correcta:1,
+explicacion:"La etiqueta <label> identifica y describe la función de un control."
+},
+
+{
+pregunta:"15. ¿Qué método muestra los datos en la URL?",
+opciones:["POST","PUT","GET"],
+correcta:2,
+explicacion:"GET envía los datos como parámetros visibles en la URL."
+},
+
+{
+pregunta:"16. ¿Qué método suele usarse para datos sensibles?",
+opciones:["POST","GET","LINK"],
+correcta:0,
+explicacion:"POST evita que los datos aparezcan en la barra de direcciones."
+},
+
+{
+pregunta:"17. ¿Qué atributo hace obligatorio un campo?",
+opciones:["required","mandatory","needed"],
+correcta:0,
+explicacion:"El atributo required obliga al usuario a completar el campo."
+},
+
+{
+pregunta:"18. ¿Qué atributo identifica un control por nombre?",
+opciones:["value","name","size"],
+correcta:1,
+explicacion:"El atributo name identifica el dato cuando se envía al servidor."
+},
+
+{
+pregunta:"19. ¿Qué atributo muestra un valor inicial en un campo?",
+opciones:["placeholder","value","initial"],
+correcta:1,
+explicacion:"El atributo value establece el valor inicial de un control."
+},
+
+{
+pregunta:"20. ¿Cuál es el objetivo principal de un formulario?",
+opciones:[
+"Insertar imágenes",
+"Recoger datos del usuario",
+"Aplicar estilos CSS"
+],
+correcta:1,
+explicacion:"Los formularios se utilizan para recopilar información proporcionada por el usuario."
+}
+
+];
+
+const formulario = document.getElementById("quiz");
+
+preguntas.forEach((p,i)=>{
+
+let bloque=document.createElement("div");
+bloque.className="pregunta";
+
+let html=`<h3>${p.pregunta}</h3>`;
+
+p.opciones.forEach((op,j)=>{
+html+=`
+<label>
+<input type="radio" name="p${i}" value="${j}">
+<code>${op}</code>
+</label><br>`;
+});
+
+html+=`<div id="r${i}"></div>`;
+
+bloque.innerHTML=html;
+formulario.appendChild(bloque);
+
+});
+
+function corregir(){
+
+let correctas = 0;
+
+preguntas.forEach((p,i)=>{
+
+const seleccion=document.querySelector(`input[name="p${i}"]:checked`);
+const resultado=document.getElementById(`r${i}`);
+
+if(seleccion){
+
+const respuesta=parseInt(seleccion.value);
+
+if(respuesta===p.correcta){
+
+correctas++;
+
+resultado.innerHTML=`
+<div class="resultado correcta">
+✅ Correcta<br><br>
+<strong>Tu respuesta:</strong> ${p.opciones[respuesta]}<br><br>
+<strong>Explicación:</strong> ${p.explicacion}
+</div>`;
+
+}else{
+
+resultado.innerHTML=`
+<div class="resultado incorrecta">
+❌ Incorrecta<br><br>
+<strong>Tu respuesta:</strong> ${p.opciones[respuesta]}<br>
+<strong>Respuesta correcta:</strong> ${p.opciones[p.correcta]}<br><br>
+<strong>Explicación:</strong> ${p.explicacion}
+</div>`;
+}
+
+}else{
+
+resultado.innerHTML=`
+<div class="resultado incorrecta">
+❌ Sin responder<br><br>
+<strong>Respuesta correcta:</strong> ${p.opciones[p.correcta]}<br><br>
+<strong>Explicación:</strong> ${p.explicacion}
+</div>`;
+}
+
+});
+
+const porcentaje=((correctas/20)*100).toFixed(0);
+
+document.getElementById("puntuacion").innerHTML=
+`✅ Resultado final: ${correctas} de 20 preguntas correctas (${porcentaje}%)`;
+
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
