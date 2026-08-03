@@ -1,3 +1,4 @@
 document.write("hola mundo")
-
-document.write('<br><br><a href="../index.html">Volver a la página principal</a>');
+<p>
+    <script src="./code/1_holamundo.js"></script>
+</p>
