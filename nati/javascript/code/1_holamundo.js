@@ -1,4 +1,4 @@
 document.write("Hola Mundo");
- function irInicio() {
-    window.location.href = "./nati/index.html";
+function irInicio() {
+    window.location.href = "../index.html";
 }
