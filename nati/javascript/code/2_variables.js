@@ -4,14 +4,14 @@
 
     <body>
     <script languaje="JavaScript">
-    var nombre='Juan';
-    var edad=10;
-    var altura=1.92;
+    var nombre='Natalia';
+    var edad=26;
+    var altura=1.65;
     var casado=false;
     document.write(nombre);
-    document.write('<br');
+    document.write('<br></br>');
     document.write(altura);
-    document.write('<br>');
+    document.write('<br></br>');
     document.write(casado);
     </script>
     </body>
