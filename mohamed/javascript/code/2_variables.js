@@ -2,7 +2,7 @@ var nombre='Mohamed';
 var edad=22;
 var altura=1.70;
 var casado=false;
-document.write(Mohamed);
+document.write(nombre);
 document.write('<br>');
 document.write(edad);
 document.write('<br>');
