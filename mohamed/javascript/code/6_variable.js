@@ -8,5 +8,6 @@ if (num1>num2)
 }    
 else
 {
- document.write(' el mayor es '+num2);   
-}    
+ document.write(' el mayor es '+num2);
+}
+  
