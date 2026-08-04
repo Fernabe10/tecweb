@@ -3,9 +3,8 @@ body {
 }
 
 h1 {
-    color: #5F7371;
-    font-size: 45px;
-    text-align: center;
+    color: red !important;
+    font-size: 80px !important;
 }
 
 hr {
