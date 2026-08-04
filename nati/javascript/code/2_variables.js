@@ -1,4 +1,3 @@
-
 var nombre='Natalia';
 var edad=26;
 var altura=1.65;
