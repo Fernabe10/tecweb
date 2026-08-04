@@ -8,3 +8,4 @@ document.write(edad);
 document.write('<br>');
 document.write(altura);
 document.write('<br>');
+document.write(casado)
