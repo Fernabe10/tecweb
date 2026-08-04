@@ -1,0 +1,11 @@
+var nombre='Natalia';
+var edad=26;
+var altura=1.65;
+var casado=false;
+document.write(nombre);
+document.write('<br>');
+document.write(edad);
+document.write('<br>');
+document.write(altura);
+document.write('<br>');
+document.write(casado);
