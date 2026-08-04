@@ -1,2 +1,17 @@
 body { background-color:#9DBEBB;
-     }
+     } 
+
+h1 {color: #031926;
+     font-family:"display-font";
+     font-size: medium;
+     text-align: center;
+}
+
+hr {color:#031926;
+}
+
+a {
+    color: #031926;
+}
+
+
