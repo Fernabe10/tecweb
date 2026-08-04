@@ -15,11 +15,11 @@ if (pro>=7)
 else
 {
     if (pro>=4)
-{
-    document.write('regular');
-}
-else    
-{
-    document.write('reprobado');
- } 
+    {
+            document.write('regular');
+    }
+    else    
+    {
+        document.write('reprobado');
+    } 
 }
