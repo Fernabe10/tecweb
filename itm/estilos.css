@@ -3,18 +3,20 @@ body {
 }
 
 h1 {
-    color: red !important;
-    font-size: 80px !important;
+    color: #3D4A49;
+    font-size: 45px;
+    text-align: center;
 }
 
+
 hr {
-    color: #5F7371;
+    color: #3D4A49;
 }
 
 a {
-    color: #5F7371;
+    color: #3D4A49;
 }
 
 .enlace-personalizado {
-    color: #5F7371;
+    color: #3D4A49;
 }
