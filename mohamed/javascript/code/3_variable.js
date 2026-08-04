@@ -1,4 +1,4 @@
-var nomb;
+var nombre;
 var edad;
 nombre=prompt('Ingrese su nombre:','');
 edad=prompt('Ingrese su edad:','');
