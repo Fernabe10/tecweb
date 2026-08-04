@@ -4,6 +4,6 @@ nombre=prompt('Ingrese su nombre:','');
 edad=prompt('Ingrese su edad:','');
 document.write('hola');
 document.write(nombre);
-document.write('asi que tienes');
+document.write(' asi que tienes ');
 document.write(edad);
 document.write('años');
