@@ -9,9 +9,9 @@
     var altura=1.92;
     var casado=false;
     document.write(nombre);
-    document.write('<br>');
+    document.write('<br></br>');
     document.write(altura);
-    document.write('<br>');
+    document.write('<br></br>');
     document.write(casado);
     </script>
     </body>
