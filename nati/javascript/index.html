@@ -1,33 +1,37 @@
-<html
-    <head>
-    <title> Primeras pruebas </title>
-    </head>
-    
-    <body>
-        <p>Ejercicios de JavaScript</p>
-        <p><script language="JavaScript" src ="./code/1_holamundo.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src ="./code/2_variables.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/3_entrada_datos.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/4_secuenciales.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/5_condicionales_simples.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/6_condicionales_compuestas.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/7_condicionales_anidadas.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/8_operadores_logicos&&.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/9_operadores_logicos_o.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/10_estructuras_switch.js"></script></p>
-        <br>
-        <p><script language="JavaScript" src="./code/11_switch_colores.js"></script></p>
-        <br>
-        <p><a href="../">Volver a la página principal</a></p>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicios JavaScript</title>
+</head>
+<body>
 
-    </body>
+<h1>Ejercicios de JavaScript</h1>
+
+<select id="ejercicio">
+    <option value="">Selecciona un ejercicio</option>
+    <option value="1_holamundo">Hola Mundo</option>
+    <option value="2_variables">Variables</option>
+    <option value="3_entrada_datos">Entrada de datos</option>
+    <option value="4_secuenciales">Secuenciales</option>
+    <option value="5_condicionales_simples">Condicionales simples</option>
+    <option value="6_condicionales_compuestas">Condicionales compuestas</option>
+</select>
+
+<button onclick="cargar()">Ejecutar</button>
+
+<script>
+function cargar() {
+    const ejercicio = document.getElementById("ejercicio").value;
+
+    if (!ejercicio) return;
+
+    const script = document.createElement("script");
+    script.src = `code/${ejercicio}.js`;
+
+    document.body.appendChild(script);
+}
+</script>
+
+</body>
 </html>
