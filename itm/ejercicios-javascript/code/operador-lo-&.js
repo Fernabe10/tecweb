@@ -9,7 +9,7 @@ if (num1>num2 && num1>num3)
 {
 document.write( "el mayor es el" + num1);
 }
-else
+    else
 {
     if (num2>num3)
     {
