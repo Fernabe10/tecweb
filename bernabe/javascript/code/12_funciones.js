@@ -9,3 +9,5 @@ function advertencia(){
 }
 
 advertencia();
+
+advertencia();
