@@ -1,4 +1,3 @@
-
 function mostrar() 
 {   
 var nom=document.form1.nombre.value;   
@@ -8,10 +7,10 @@ alert('Y la edad:' + ed);
 } 
 
 
-<form name="form1">    
+  <form name="form1">    
  Ingrese su nombre:   
 <input type="text" name="nombre"><br>
  Ingrese su edad:   
 <input type="text" name="edad"><br>
 <input type="button" value="Confirmar" onClick="mostrar()">
-</form>
+  </form>

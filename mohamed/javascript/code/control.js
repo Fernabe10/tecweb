@@ -5,9 +5,9 @@ function mostrar()
    alert('Ingreso el nombre:' + nom);
    alert('Ingreso el nombre:' + ed) 
 }
-<form name="form1">
+<form> name="form1">
   Ingrese su nombre:
   <input type="text" name="nombre"><br>
   Ingrese su edad:
   <input type="button" value="Confirmar"  
-  
+</form>
