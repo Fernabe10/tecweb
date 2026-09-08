@@ -30,5 +30,16 @@ php -S 0.0.0.0:8000
 </body>
 </html>
 ```
+## Comentarios
+```php
+<?php
+
+// Comentario de una linea.
+
+/* Comentarios de Varias Lineas */
+
+?>
+
+```
 
 
