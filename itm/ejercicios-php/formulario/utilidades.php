@@ -1,0 +1,1 @@
+Aquí va la comparación para ver si es mayor que el número
