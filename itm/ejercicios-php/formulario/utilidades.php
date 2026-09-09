@@ -1,1 +1,11 @@
-Aquí va la comparación para ver si es mayor que el número
+<?php
+
+function es_mayor_de_edad($edad) {
+    if ($edad >= 18) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+?>
