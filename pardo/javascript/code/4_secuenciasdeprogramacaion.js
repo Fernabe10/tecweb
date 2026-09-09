@@ -1,0 +1,13 @@
+var valor1;
+var valor2;
+valor1=prompt('Ingrese primer número:','');
+valor2=prompt('Ingrese segundo número','');
+var num1=parseInt(valor1, 10);
+var num2=parseInt(valor2, 10);
+var suma=num1+num2;
+var producto=num1*num2;
+document.write('La suma es ');
+document.write(suma);
+document.write('<br>');
+document.write('El producto es ');
+document.write(producto);

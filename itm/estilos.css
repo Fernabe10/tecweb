@@ -1,0 +1,22 @@
+body {
+    background-color: #9DBEBB;
+}
+
+h1 {
+    color: #3D4A49;
+    font-size: 45px;
+    text-align: center;
+}
+
+
+hr {
+    color: #3D4A49;
+}
+
+a {
+    color: #3D4A49;
+}
+
+.enlace-personalizado {
+    color: #3D4A49;
+}

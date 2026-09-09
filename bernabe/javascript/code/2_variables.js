@@ -1,0 +1,11 @@
+var nombre = 'Fernando';
+var edad = 22;
+var altura = 1.73;
+var casado = false;
+document.write(nombre);
+document.write('<br>');
+document.write(edad);
+document.write('<br>');
+document.write(altura);
+document.write('<br>');
+document.write(casado);
