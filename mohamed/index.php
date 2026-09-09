@@ -11,6 +11,7 @@
     <?php
         echo "Esta es mi primera página en PHP";
     ?>
-
+    6
+ 
 </body>
 </html>
