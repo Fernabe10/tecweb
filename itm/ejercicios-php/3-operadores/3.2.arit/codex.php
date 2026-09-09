@@ -1,7 +1,7 @@
 <?php
 
 echo "Hola mundo, soy un archivo PHP apto para servidores y contengo una serie de variables numerales con las que operar de forma aritmética:<br>
-Si disponemos de dos (3) variables cuyo nombre son ('\$num1'), ('\$num2') y ('\$num3') con un valor asociado (10), (20) y (30), se pueden hacer muchas cosas: <br><br>";
+Si disponemos de tres (3) variables cuyo nombre son ('\$num1'), ('\$num2') y ('\$num3') con un valor asociado (10), (20) y (30), se pueden hacer muchas cosas: <br><br>";
 
 $num1= 10;
 $num2= 20;
