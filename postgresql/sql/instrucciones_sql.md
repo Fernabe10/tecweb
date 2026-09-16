@@ -69,3 +69,18 @@ SELECT dni,
 FROM persona
 ORDER BY apellido_1, apellido_2, nombre;
 ```
+## Crear un usuario con solo derecho de lectura en una tabla de una base de datos
+```sql
+CREATE USER php_prueba
+WITH PASSWORD 'TuPasswordSegura';
+
+GRANT CONNECT ON DATABASE phptecweb TO php_prueba;
+
+GRANT USAGE ON SCHEMA public TO php_prueba;
+```
+## Verificar los permisos
+```sql
+SELECT grantee, privilege_type
+FROM information_schema.role_table_grants
+WHERE table_name = 'persona';
+```
