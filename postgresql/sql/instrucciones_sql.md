@@ -11,6 +11,11 @@ FROM pg_database;
 ```sql
 CREATE DATABASE phptecweb;
 ```
+## Eliminar una base de datos
+```sql
+DROP DATABASE phptecweb;
+```
+
 ## Crear tabla PERSONA
 ```sql
 -- Crear tabla PERSONA
