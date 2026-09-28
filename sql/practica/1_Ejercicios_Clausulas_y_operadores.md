@@ -1,6 +1,46 @@
 # Ejercicios prácticos
 
-Estos ejercicios sirven para practicar las consultas básicas y los filtros estudiados en la sesión.
+Estos ejercicios sirven para practicar las consultas y filtros básicos vistos en la sesión.
+
+---
+
+# Datos para realizar los ejercicios
+
+## Tabla clientes
+
+| id_cliente | nombre | ciudad | edad | categoria |
+|------------|---------|---------|------|------------|
+| 1 | Ana | Madrid | 35 | Premium |
+| 2 | Luis | Sevilla | 25 | Normal |
+| 3 | Marta | Valencia | 42 | Premium |
+| 4 | Pablo | Madrid | 19 | Normal |
+| 5 | Sonia | Sevilla | 31 | Premium |
+| 6 | Carlos | Bilbao | 28 | Normal |
+| 7 | Elena | Valencia | 22 | Premium |
+
+## Tabla productos
+
+| id_producto | nombre | precio | categoria |
+|-------------|---------|---------|------------|
+| 1 | Ratón | 15 | Informática |
+| 2 | Monitor | 220 | Informática |
+| 3 | Teclado | 40 | Informática |
+| 4 | Silla | 180 | Oficina |
+| 5 | Lámpara | 35 | Oficina |
+| 6 | Impresora | 140 | Informática |
+| 7 | Escritorio | 320 | Oficina |
+
+## Tabla empleados
+
+| id_empleado | nombre | departamento | salario |
+|-------------|---------|--------------|----------|
+| 1 | Laura | Ventas | 2200 |
+| 2 | Jorge | Ventas | 1800 |
+| 3 | Beatriz | Marketing | 2500 |
+| 4 | David | Recursos Humanos | 2100 |
+| 5 | Pedro | Ventas | 3200 |
+| 6 | Sara | Marketing | 1900 |
+| 7 | Miguel | Recursos Humanos | 2800 |
 
 ---
 
@@ -54,14 +94,14 @@ FROM clientes;
 
 ## Ejercicio 4
 
-Mostrar el nombre y la ciudad de todos los alumnos.
+Mostrar el nombre y la ciudad de todos los clientes.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT nombre, ciudad
-FROM alumnos;
+FROM clientes;
 ```
 
 </details>
@@ -70,14 +110,14 @@ FROM alumnos;
 
 ## Ejercicio 5
 
-Mostrar el título y la categoría de todos los libros.
+Mostrar el nombre y el salario de todos los empleados.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
-SELECT titulo, categoria
-FROM libros;
+SELECT nombre, salario
+FROM empleados;
 ```
 
 </details>
@@ -86,7 +126,7 @@ FROM libros;
 
 ## Ejercicio 6
 
-Mostrar todos los clientes que viven en Madrid.
+Mostrar los clientes que viven en Madrid.
 
 <details>
 <summary>Ver solución</summary>
@@ -103,15 +143,15 @@ WHERE ciudad = 'Madrid';
 
 ## Ejercicio 7
 
-Mostrar todos los productos cuyo precio sea mayor que 100.
+Mostrar los empleados con salario superior a 2500.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM productos
-WHERE precio > 100;
+FROM empleados
+WHERE salario > 2500;
 ```
 
 </details>
@@ -120,15 +160,15 @@ WHERE precio > 100;
 
 ## Ejercicio 8
 
-Mostrar todos los empleados cuyo salario sea inferior a 2000.
+Mostrar los productos cuyo precio sea menor que 100.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM empleados
-WHERE salario < 2000;
+FROM productos
+WHERE precio < 100;
 ```
 
 </details>
@@ -137,15 +177,15 @@ WHERE salario < 2000;
 
 ## Ejercicio 9
 
-Mostrar todos los alumnos que tengan exactamente 18 años.
+Mostrar los clientes con edad mayor o igual a 30 años.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM alumnos
-WHERE edad = 18;
+FROM clientes
+WHERE edad >= 30;
 ```
 
 </details>
@@ -154,15 +194,15 @@ WHERE edad = 18;
 
 ## Ejercicio 10
 
-Mostrar todos los cursos con una duración igual o superior a 50 horas.
+Mostrar los empleados cuyo departamento sea distinto de Ventas.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM cursos
-WHERE horas >= 50;
+FROM empleados
+WHERE departamento <> 'Ventas';
 ```
 
 </details>
@@ -171,7 +211,7 @@ WHERE horas >= 50;
 
 ## Ejercicio 11
 
-Mostrar todos los productos cuyo precio esté entre 50 y 200 euros.
+Mostrar los productos cuyo precio esté entre 100 y 250.
 
 <details>
 <summary>Ver solución</summary>
@@ -179,7 +219,7 @@ Mostrar todos los productos cuyo precio esté entre 50 y 200 euros.
 ```sql
 SELECT *
 FROM productos
-WHERE precio BETWEEN 50 AND 200;
+WHERE precio BETWEEN 100 AND 250;
 ```
 
 </details>
@@ -188,15 +228,16 @@ WHERE precio BETWEEN 50 AND 200;
 
 ## Ejercicio 12
 
-Mostrar todos los libros publicados entre 2015 y 2020.
+Mostrar los clientes de Madrid que tengan más de 20 años.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM libros
-WHERE anio_publicacion BETWEEN 2015 AND 2020;
+FROM clientes
+WHERE ciudad = 'Madrid'
+AND edad > 20;
 ```
 
 </details>
@@ -205,58 +246,7 @@ WHERE anio_publicacion BETWEEN 2015 AND 2020;
 
 ## Ejercicio 13
 
-Mostrar todos los empleados cuyo salario sea distinto de 2500.
-
-<details>
-<summary>Ver solución</summary>
-
-```sql
-SELECT *
-FROM empleados
-WHERE salario <> 2500;
-```
-
-</details>
-
----
-
-## Ejercicio 14
-
-Mostrar todos los clientes que no vivan en Sevilla.
-
-<details>
-<summary>Ver solución</summary>
-
-```sql
-SELECT *
-FROM clientes
-WHERE ciudad <> 'Sevilla';
-```
-
-</details>
-
----
-
-## Ejercicio 15
-
-Mostrar todos los alumnos mayores de 21 años.
-
-<details>
-<summary>Ver solución</summary>
-
-```sql
-SELECT *
-FROM alumnos
-WHERE edad > 21;
-```
-
-</details>
-
----
-
-## Ejercicio 16
-
-Mostrar todos los empleados que trabajen en el departamento de Ventas y tengan un salario superior a 2000.
+Mostrar los empleados de Ventas con salario mayor o igual a 2000.
 
 <details>
 <summary>Ver solución</summary>
@@ -265,16 +255,52 @@ Mostrar todos los empleados que trabajen en el departamento de Ventas y tengan u
 SELECT *
 FROM empleados
 WHERE departamento = 'Ventas'
-AND salario > 2000;
+AND salario >= 2000;
 ```
 
 </details>
 
 ---
 
-## Ejercicio 17
+## Ejercicio 14
 
-Mostrar todos los clientes que vivan en Madrid y sean mayores o iguales a 18 años.
+Mostrar los productos de la categoría Informática cuyo precio sea superior a 100.
+
+<details>
+<summary>Ver solución</summary>
+
+```sql
+SELECT *
+FROM productos
+WHERE categoria = 'Informática'
+AND precio > 100;
+```
+
+</details>
+
+---
+
+## Ejercicio 15
+
+Mostrar los clientes de categoría Premium cuya edad esté entre 30 y 45 años.
+
+<details>
+<summary>Ver solución</summary>
+
+```sql
+SELECT *
+FROM clientes
+WHERE categoria = 'Premium'
+AND edad BETWEEN 30 AND 45;
+```
+
+</details>
+
+---
+
+## Ejercicio 16
+
+Mostrar los clientes que vivan en Madrid o en Valencia.
 
 <details>
 <summary>Ver solución</summary>
@@ -283,7 +309,25 @@ Mostrar todos los clientes que vivan en Madrid y sean mayores o iguales a 18 añ
 SELECT *
 FROM clientes
 WHERE ciudad = 'Madrid'
-AND edad >= 18;
+OR ciudad = 'Valencia';
+```
+
+</details>
+
+---
+
+## Ejercicio 17
+
+Mostrar los empleados del departamento Marketing o con salario superior a 3000.
+
+<details>
+<summary>Ver solución</summary>
+
+```sql
+SELECT *
+FROM empleados
+WHERE departamento = 'Marketing'
+OR salario > 3000;
 ```
 
 </details>
@@ -292,16 +336,15 @@ AND edad >= 18;
 
 ## Ejercicio 18
 
-Mostrar todos los alumnos que vivan en Madrid o en Valencia.
+Mostrar los productos que no pertenezcan a la categoría Oficina.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM alumnos
-WHERE ciudad = 'Madrid'
-OR ciudad = 'Valencia';
+FROM productos
+WHERE NOT categoria = 'Oficina';
 ```
 
 </details>
@@ -310,16 +353,16 @@ OR ciudad = 'Valencia';
 
 ## Ejercicio 19
 
-Mostrar todos los productos cuya categoría sea Electrónica o cuyo precio sea superior a 500.
+Mostrar los clientes que no vivan en Sevilla y tengan más de 25 años.
 
 <details>
 <summary>Ver solución</summary>
 
 ```sql
 SELECT *
-FROM productos
-WHERE categoria = 'Electrónica'
-OR precio > 500;
+FROM clientes
+WHERE NOT ciudad = 'Sevilla'
+AND edad > 25;
 ```
 
 </details>
@@ -328,7 +371,7 @@ OR precio > 500;
 
 ## Ejercicio 20
 
-Mostrar todos los empleados que no pertenezcan al departamento de Recursos Humanos y cuyo salario esté entre 2000 y 4000 euros.
+Mostrar los empleados que pertenezcan a Ventas o Marketing y tengan un salario entre 1800 y 3000 euros.
 
 <details>
 <summary>Ver solución</summary>
@@ -336,8 +379,6 @@ Mostrar todos los empleados que no pertenezcan al departamento de Recursos Human
 ```sql
 SELECT *
 FROM empleados
-WHERE NOT departamento = 'Recursos Humanos'
-AND salario BETWEEN 2000 AND 4000;
-```
-
-</details>
+WHERE (departamento = 'Ventas'
+OR departamento = 'Marketing')
+AND salario BETWEEN 1800 AND 3000
